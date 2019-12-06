@@ -21,7 +21,6 @@ namespace OrganizeShortcut
         {
             this.Config = helper.ReadConfig<ModConfig>();
             Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
-           
         }
 
         private void Input_ButtonPressed(object sender, ButtonPressedEventArgs e)
