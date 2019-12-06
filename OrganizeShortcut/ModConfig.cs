@@ -10,7 +10,7 @@ using StardewModdingAPI;
         public class ModConfigControls
         {
             public SButton[] Organize { get; set; } = { SButton.OemTilde };
-            public SButton[] StackToChest { get; set; } = { SButton.E };
+            public SButton[] StackToChest { get; set; } = { SButton.Q };
     }
     }
 
