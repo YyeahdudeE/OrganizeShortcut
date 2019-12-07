@@ -39,7 +39,10 @@ namespace OrganizeShortcut
                     if (menu.chestColorPicker != null)
                     {
                         menu.FillOutStacks();
-                        Organize();
+                        if (this.Config.Controls.OrganizeAfterStackToChest)
+                        {
+                            Organize();
+                        }
                     }
                 }
             }

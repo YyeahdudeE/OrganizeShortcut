@@ -11,6 +11,8 @@ using StardewModdingAPI;
         {
             public SButton[] Organize { get; set; } = { SButton.OemTilde };
             public SButton[] StackToChest { get; set; } = { SButton.Q };
-    }
+
+            public bool OrganizeAfterStackToChest { get; set; } = true;
+        }
     }
 
