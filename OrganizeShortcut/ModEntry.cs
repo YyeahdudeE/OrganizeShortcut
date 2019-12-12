@@ -35,8 +35,8 @@ namespace OrganizeShortcut
                 if (this.Config.Controls.StackToChest.Contains(e.Button) && Game1.activeClickableMenu is ItemGrabMenu)
                 {
                     ItemGrabMenu menu = (ItemGrabMenu)Game1.activeClickableMenu;
-                    
-                    if (menu.chestColorPicker != null || Game1.currentLocation.Name == "FarmHouse")
+
+                    if (menu.organizeButton != null)
                     {
                         menu.FillOutStacks();
                         if (this.Config.Controls.OrganizeAfterStackToChest)
@@ -56,10 +56,10 @@ namespace OrganizeShortcut
             if (Game1.activeClickableMenu is ItemGrabMenu)
             {
                 ItemGrabMenu menu = (ItemGrabMenu)Game1.activeClickableMenu;
-
-                if (menu.chestColorPicker != null || Game1.currentLocation.Name == "FarmHouse")
-                {
-                    Chest chest = menu.behaviorOnItemGrab?.Target as Chest;
+                Chest chest = menu.context as Chest;
+                
+                if (chest != null && menu.organizeButton != null)
+                {                   
                     StardewValley.Menus.ItemGrabMenu.organizeItemsInList(chest.items);
                 }
             }
